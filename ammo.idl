@@ -1264,3 +1264,8 @@ interface btSoftBodyHelpers {
   btSoftBody CreateFromTriMesh([Ref] btSoftBodyWorldInfo worldInfo, float[] vertices, long[] triangles, long ntriangles, boolean randomizeConstraints);
   btSoftBody CreateFromConvexHull([Ref] btSoftBodyWorldInfo worldInfo, [Const] btVector3 vertices, long nvertices, boolean randomizeConstraints);
 };
+
+interface btGearConstraint {
+  void btGearConstraint([Ref] btRigidBody rbA, [Ref] btRigidBody rbB, [Const, Ref] btVector3 axisInA, [Const, Ref] btVector3 axisInB, float ratio);
+};
+btGearConstraint implements btTypedConstraint;
