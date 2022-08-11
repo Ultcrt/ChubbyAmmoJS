@@ -1269,3 +1269,8 @@ interface btGearConstraint {
   void btGearConstraint([Ref] btRigidBody rbA, [Ref] btRigidBody rbB, [Const, Ref] btVector3 axisInA, [Const, Ref] btVector3 axisInB, float ratio);
 };
 btGearConstraint implements btTypedConstraint;
+
+interface btUniversalConstraint {
+  void btUniversalConstraint([Ref] btRigidBody rbA, [Ref] btRigidBody rbB, [Const, Ref] btVector3 anchor, [Const, Ref] btVector3 axis1, [Const, Ref] btVector3 axis2);
+};
+btUniversalConstraint implements btGeneric6DofConstraint;
