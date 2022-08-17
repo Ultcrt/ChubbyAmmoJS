@@ -748,6 +748,7 @@ interface btTypedConstraint {
   void setBreakingImpulseThreshold([Const] float threshold);
   [Const] float getParam(long num, long axis);
   void setParam(long num, float value, long axis);
+  void setOverrideNumSolverIterations(long overideNumIterations);
 };
 
 enum btConstraintParams {
